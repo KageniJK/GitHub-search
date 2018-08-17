@@ -16,7 +16,6 @@ export class DevRequestService {
     interface ApiResponse {
       login: string;
       avatar_url: string;
-      repo_url: any;
     }
 
   const promise = new Promise((resolve, reject) => {
@@ -39,10 +38,11 @@ export class DevRequestService {
     interface RepoResponse {
       repo_url: any;
     }
-
+    repos = [];
   const promise1 = new Promise((resolve, reject) => {
     this.http.get<RepoResponse>(environment.repoApi).toPromise().then(response => {
-      this.dev.repo = response;
+      for (const i = 0; i <= response.length; i++) {
+        this.dev.repo = response[i].name; }
       // console.log(response[0].id);
       resolve();
     },
