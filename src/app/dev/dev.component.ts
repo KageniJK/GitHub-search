@@ -17,6 +17,9 @@ export class DevComponent implements OnInit {
   ngOnInit() {
     this.devService.devRequest();
     this.dev = this.devService.dev;
+    this.devService.userRepoRequest();
+    this.dev = this.devService.dev;
   }
+
 
 }

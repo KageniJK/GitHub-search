@@ -10,12 +10,13 @@ export class DevRequestService {
   dev: Dev;
 
   constructor(private http: HttpClient) {
-  this.dev = new Dev('', ''); }
+  this.dev = new Dev('', '', ''); }
 
   devRequest() {
     interface ApiResponse {
       login: string;
       avatar_url: string;
+      repo_url: any;
     }
 
   const promise = new Promise((resolve, reject) => {
@@ -33,4 +34,25 @@ export class DevRequestService {
     });
     return promise;
   }
+
+  userRepoRequest() {
+    interface RepoResponse {
+      repo_url: any;
+    }
+
+  const promise1 = new Promise((resolve, reject) => {
+    this.http.get<RepoResponse>(environment.repoApi).toPromise().then(response => {
+      this.dev.repo = response;
+      // console.log(response[0].id);
+      resolve();
+    },
+    error => {
+      this.dev.name = 'Experiencing some tech difficulties';
+
+      reject(error);
+    });
+    });
+    return promise1;
+  }
+
 }
