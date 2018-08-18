@@ -3,4 +3,8 @@
   <br>
 </p>
 <h1>{{dev.name}}</h1>
-<p>{{dev.repo}}</p>
+<div class="container" *ngFor='let repo of dev.repo'>
+
+  <p>{{repo.name}}</p>
+  <p>{{repo.description}}</p>
+</div>
