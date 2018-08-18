@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
@@ -12,7 +14,7 @@ import { RepoComponent } from './repo/repo.component';
     AppComponent,
     SearchFormComponent,
     DevComponent,
-    RepoComponent
+    RepoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
-<p>
-  <img src={{dev.image}} alt="Profile picture">
-  <br>
-</p>
-<h1>{{dev.name}}</h1>
-<div class="container" *ngFor='let repo of dev.repo'>
-
-  <p>{{repo.name}}</p>
-  <p>{{repo.description}}</p>
+<div class="container row">
+  <div class="col-md-3">
+    <img src={{dev.image}} alt="Profile picture">
+    <h1>{{dev.name}}</h1>
+    <br>
+  </div>
+  <div class="col-md-9" *ngFor='let repo of dev.repo'>
+    <p>{{repo.name}}</p>
+    <p>{{repo.description}}</p>
+  </div>
 </div>
