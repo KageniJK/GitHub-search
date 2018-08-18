@@ -1,11 +1,10 @@
 <div class="container row">
-  <div class="col-md-3">
+  <div class="col-md-4">
     <img src={{dev.image}} alt="Profile picture">
     <h1>{{dev.name}}</h1>
-    <br>
   </div>
-  <div class="col-md-9" *ngFor='let repo of dev.repo'>
-    <p>{{repo.name}}</p>
-    <p>{{repo.description}}</p>
+  <div class="col-md-8">
+    <app-repo></app-repo>
   </div>
+
 </div>

@@ -47,7 +47,7 @@ export class DevRequestService {
       resolve();
     },
     error => {
-      this.dev.name = 'Experiencing some tech difficulties';
+      this.dev.repo = 'Experiencing some tech difficulties';
 
       reject(error);
     });
