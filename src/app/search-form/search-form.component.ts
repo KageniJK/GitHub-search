@@ -7,7 +7,10 @@ import {Dev} from '../dev';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  public search: any;
+
+  searcher(search: string) {
+    console.log(search);
+  }
 
   constructor() { }
 

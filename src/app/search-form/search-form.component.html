@@ -1,8 +1,14 @@
-<form #searchForm=ngForm>
+<form>
   <div class="form-row">
-    <input type="text" name="search" class="form-control" placeholder="search" [(ngModel)]='search'>
-    Display:{{search}}
-    <button type="submit" name="button" class="btn btn-secondary btn-sm">Search</button>
+    <input type="text" name="search" class="form-control" placeholder="search" #search>
+    <button class="btn btn-secondary btn-sm" (click)="searcher(search.value)">Search</button>
   </div>
 
 </form>
+
+
+<!-- <input #search>
+
+    <button (click)="searcher(search.value)">Add</button>
+
+     <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul> -->
