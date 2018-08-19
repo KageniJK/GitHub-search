@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Dev } from '../dev';
+import {SearchFormComponent} from '../search-form/search-form.component';
 
 
 @Injectable()
@@ -12,6 +13,11 @@ export class DevRequestService {
   constructor(private http: HttpClient) {
   this.dev = new Dev('', '', ''); }
 
+  createUrl() {
+    const url = 'https://api.github.com/users/' + 'kagenijk';
+    return url;
+  }
+
   devRequest() {
     interface ApiResponse {
       login: string;
@@ -20,7 +26,7 @@ export class DevRequestService {
     }
 
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response => {
+    this.http.get<ApiResponse>( environment.apiUrl).toPromise().then(response => {
       this.dev.name = response.login;
       this.dev.image = response.avatar_url;
 

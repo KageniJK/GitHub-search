@@ -15,6 +15,7 @@ export class DevComponent implements OnInit {
   constructor(private devService: DevRequestService) { }
 
   ngOnInit() {
+    this.devService.createUrl();
     this.devService.devRequest();
     this.dev = this.devService.dev;
   }

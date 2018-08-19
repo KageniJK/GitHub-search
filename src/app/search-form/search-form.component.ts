@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Dev} from '../dev';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-search-form',
@@ -9,7 +10,8 @@ import {Dev} from '../dev';
 export class SearchFormComponent implements OnInit {
 
   searcher(search: string) {
-    console.log(search);
+    const y = 'https://api.github.com/users/' + search;
+    console.log(y);
   }
 
   constructor() { }
