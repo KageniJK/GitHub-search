@@ -1,8 +1,6 @@
 input{
   max-width: 40%;
-  float: right;
 }
 button{
-  float: right;
-  margin-right: 5px;
+  margin-left: 5px;
 }
