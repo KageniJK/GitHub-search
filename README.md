@@ -1,5 +1,40 @@
 # GitSearch
 
+Moringa school week 2 Friday IP to create a page for the github search app.
+
+#### By James Kageni
+
+## Description
+this is a simple angular app that shows a github user and allows one to search for other users.
+
+## Prerequisites
+  You need the following to make edits to the repository:
+  1. git
+  2. an integrated development environment
+  3. Angular CLI
+  4. NPM
+
+
+## Setup Instructions
+  1. Copy the clone link provided in the repository
+  2. Start your command line
+  3. Run the git clone command with the copied links
+  4. Make changes to the remote(s) used to point to your repository
+  5. follow the angular instructions below.
+
+## technologies used
+1. bootstrap
+2. NPM
+3. Angular
+4. Atom
+
+
+#### A live view of the repository can be found at: https://kagenijk.github.io/GitHub-search/
+
+
+This project is under an MIT [license](LICENSE)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
 ## Development server
