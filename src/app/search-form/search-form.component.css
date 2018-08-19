@@ -4,3 +4,7 @@ input{
 button{
   margin-left: 5px;
 }
+form{
+  margin-bottom: 10px;
+  margin-left: 20px;
+}

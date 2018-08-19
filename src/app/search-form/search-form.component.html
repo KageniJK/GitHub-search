@@ -1,7 +1,8 @@
-<form>
+<form #searchForm=ngForm>
   <div class="form-row">
-    <input type="text" name="" class="form-control" placeholder="search">
-    <button type="submit" name="button" class="btn btn-secondary">Search</button>
+    <input type="text" name="search" class="form-control" placeholder="search" [(ngModel)]='search'>
+    Display:{{search}}
+    <button type="submit" name="button" class="btn btn-secondary btn-sm">Search</button>
   </div>
 
 </form>
