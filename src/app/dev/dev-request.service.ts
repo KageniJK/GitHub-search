@@ -45,7 +45,6 @@ export class DevRequestService {
   const promise1 = new Promise((resolve, reject) => {
     this.http.get<RepoResponse>(environment.repoApi).toPromise().then(response => {
       this.dev.repo = response;
-      // console.log(response[0].id);
       resolve();
     },
     error => {

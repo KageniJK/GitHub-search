@@ -3,13 +3,18 @@
     <input type="text" name="search" class="form-control" placeholder="search" #search>
     <button class="btn btn-secondary btn-sm" (click)="searcher(search.value)">Search</button>
   </div>
-  <div >
-    <img src="{{dev.image}}" alt="">
-    <h4>{{dev.name}}</h4>
-  </div>
-  <div *ngFor='let rep of dev.repo'>
-    <h4>{{rep.name}}</h4>
-    <p>{{rep.description}}</p>
+  <div class="container row">
+    <div class="col-md-4">
+      <img src={{dev.image}}>
+      <h1>{{dev.name}}</h1>
+    </div>
+    <div class="col-md-8" *ngFor='let repo of dev.repo'>
+        <hr>
+        <h4>{{repo.name}}</h4>
+        <p>{{repo.description}}</p>
+
+    </div>
+
   </div>
 
 </form>
