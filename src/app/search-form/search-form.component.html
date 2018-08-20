@@ -3,8 +3,11 @@
     <input type="text" name="search" class="form-control" placeholder="search" #search>
     <button class="btn btn-secondary btn-sm" (click)="searcher(search.value)">Search</button>
   </div>
-
-  <div *ngFor='let rep of repo'>
+  <div >
+    <img src="{{dev.image}}" alt="">
+    <h4>{{dev.name}}</h4>
+  </div>
+  <div *ngFor='let rep of dev.repo'>
     <h4>{{rep.name}}</h4>
     <p>{{rep.description}}</p>
   </div>

@@ -10,19 +10,23 @@ import {Repo} from '../repo';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  const repo = new Repo('');
+  // const repo = new Repo();
+  const dev = new Dev('', '', '');
   constructor(private http: HttpClient) { }
+
   searcher(search: string) {
+    const x = 'https://api.github.com/users/' + search;
+    this.http.get(x).subscribe(answer => {
+      console.log(answer);
+      this.dev.name = answer.login;
+      this.dev.image = answer.avatar_url;
+    });
     const y = 'https://api.github.com/users/' + search + '/repos' ;
-    console.log(y);
     this.http.get(y).subscribe(data => {
-       // Successful API request.
-       this.repo = data;
-       // console.log(dev.repo);
+       this.dev.repo = data;
    });
-    // this.http.get<RepoResponse>(environment.repoApi).toPromise().then(response => {
-    //   this.dev.repo = response; };
   }
+
 
 
 
