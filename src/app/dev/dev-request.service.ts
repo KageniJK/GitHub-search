@@ -13,10 +13,6 @@ export class DevRequestService {
   constructor(private http: HttpClient) {
   this.dev = new Dev('', '', ''); }
 
-  createUrl() {
-    const url = 'https://api.github.com/users/' + 'kagenijk';
-    return url;
-  }
 
   devRequest() {
     interface ApiResponse {
